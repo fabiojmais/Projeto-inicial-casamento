@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('/images/bg.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
+/* BOTÃO HERO PREMIUM */
+.hero-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 14px 40px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* SEÇÕES */
+.section {
+  padding: 80px 20px;
+  background: #fdfaf7;
+  color: #333;
+  text-align: center;
+}
+
+/* GRID PRESENTES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* PREÇO */
+.price {
+  color: #d4a373;
+  font-weight: bold;
+}
+
+/* BOTÃO PADRÃO */
+.btn {
+  background: #d4a373;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* GALERIA MELHORADA */
+.gallery {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 320px;
+}
