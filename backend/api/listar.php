@@ -5,13 +5,27 @@ header("Content-Type: application/json");
 
 require 'db.php';
 
-$result = $collection->find();
+try {
+    $result = $collection->find([], [
+        'sort' => ['data' => -1]
+    ]);
 
-$dados = [];
+    $dados = [];
 
-foreach ($result as $doc) {
-    $dados[] = $doc;
+    foreach ($result as $doc) {
+        $dados[] = [
+            "nome" => $doc['nome'],
+            "valor" => $doc['valor'],
+            "presente" => $doc['presente'],
+            "data" => $doc['data']
+        ];
+    }
+
+    echo json_encode($dados);
+
+} catch (Exception $e) {
+    echo json_encode([
+        "erro" => "Erro ao listar",
+        "mensagem" => $e->getMessage()
+    ]);
 }
-
-echo json_encode($dados);
-?>
